@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 
 export default function app() {
+  const [sipHost, setSipHost] = useState('172.31.44.91');
   const [sipUser, setSipUser] = useState("1000");
   const [sipPass, setSipPass] = useState("1234");
   const [destination, setDestination] = useState("1001");
@@ -17,7 +18,7 @@ export default function app() {
   const shouldBeConnectedRef = useRef(true);
   const remoteAudioRef = useRef(null);
 
-  const sipServerHost = "mkwebtech.servehttp.com";
+  const sipServerHost = sipHost;
   const reconnectionAttempts = 3;
   const reconnectionDelay = 4;
 
@@ -265,6 +266,17 @@ export default function app() {
       <h2 className="text-center mb-4">Audio Call Testing App</h2>
 
       <div id="connection-form" className="mx-auto" style={{ maxWidth: 500 }}>
+        <div className="form-group mb-3">
+          <label htmlFor="sip-host">Host</label>
+          <input
+            type="text"
+            className="form-control"
+            id="sip-host"
+            value={sipHost}
+            onChange={(e) => setSipHost(e.target.value)}
+            required
+          />
+        </div>
         <div className="form-group mb-3">
           <label htmlFor="sip-user">Username</label>
           <input
