@@ -17,7 +17,7 @@ export default function app() {
   const shouldBeConnectedRef = useRef(true);
   const remoteAudioRef = useRef(null);
 
-  const sipServerHost = "13.62.146.164";
+  const sipServerHost = "172.31.44.91";
   const reconnectionAttempts = 3;
   const reconnectionDelay = 4;
 
