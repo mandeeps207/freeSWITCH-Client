@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 
 export default function app() {
-  const [sipHost, setSipHost] = useState('172.31.44.91');
+  const [sipHost, setSipHost] = useState('mkwebtech.servehttp.com');
   const [sipUser, setSipUser] = useState("1000");
   const [sipPass, setSipPass] = useState("1234");
   const [destination, setDestination] = useState("1001");
@@ -119,7 +119,7 @@ export default function app() {
     }
 
     const { UserAgent, Registerer, RegistererState } = sipModuleRef.current;
-    const server = `wss://${sipServerHost}:7443`;
+    const server = `wss://${sipServerHost}:5061`;
     const uri = UserAgent.makeURI(`sip:${sipUser}@${sipServerHost}`);
     if (!uri) {
       console.error("Failed to create URI");
