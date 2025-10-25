@@ -119,7 +119,7 @@ export default function app() {
     }
 
     const { UserAgent, Registerer, RegistererState } = sipModuleRef.current;
-    const server = `wss://${sipServerHost}:5061`;
+    const server = `wss://${sipServerHost}:7443`;
     const uri = UserAgent.makeURI(`sip:${sipUser}@${sipServerHost}`);
     if (!uri) {
       console.error("Failed to create URI");
