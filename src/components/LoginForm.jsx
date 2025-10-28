@@ -16,7 +16,7 @@ const LoginForm = ({ onConnected, sipServer }) => {
   const registererRef = useRef(null);
 
   const sipServerHost = sipServer;
-  const sipWssPort = 5066; // 7443 for SSL or 5066 for no SSL
+  const sipWssPort = 7443; // 7443 for SSL or 5066 for no SSL
 
   const connectHandler = async () => {
     setError("");
