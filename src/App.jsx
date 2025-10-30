@@ -4,7 +4,7 @@ import Dashboard from "./components/Dashboard"; // your numpad UI
 
 const App = () => {
   const [sipSession, setSipSession] = useState(null);
-  const sipServer = "mkwebtech.servehttp.com"; // Make sure this is accessible
+  const sipServer = "mkwebtech.myftp.org"; // Make sure this is accessible
 
   // Keep a ref to the session to access it on unload
   const sessionRef = useRef(null);
